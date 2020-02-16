@@ -118,5 +118,6 @@ namespace SnakeGameFirst
             Spawn(snakeLength, spawnCellIndex);
             moveTimer.OnTime += Move;
         }
+        public void Update(float deltatTime) => moveTimer.Update(deltatTime);
     }
 }

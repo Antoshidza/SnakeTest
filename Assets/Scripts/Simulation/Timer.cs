@@ -14,13 +14,9 @@ namespace SnakeGameFirst
         public event Action OnTime;
 
         /// <param name="interval">Временой интервал срабатывания таймера</param>
-        public Timer(float interval = 1f)
-        {
-            this.interval = interval;
-            Updater.OnUpdateWithTime += Update;
-        }
+        public Timer(float interval = 1f) => this.interval = interval;
         /// <summary>Увеличивает значение таймера. Если досигнуто значение, установленного интервала, вызывается OnTime</summary>
-        private void Update(float time)
+        public void Update(float time)
         {
             value += time;
             if (value > interval)

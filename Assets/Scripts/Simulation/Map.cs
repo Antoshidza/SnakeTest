@@ -137,6 +137,7 @@ namespace SnakeGameFirst
             for (int i = 0; i < cellContents.Length; i++)
                 SetCellContentType(i, CellContentType.empty);
         }
+        public void Update(float deltaTime) => foodGenerator.Update(deltaTime);
 
         #region Position Utils
         /// <summary>Переводит 2D координаты клетки в индекс.</summary>

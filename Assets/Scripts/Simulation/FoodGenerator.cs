@@ -27,5 +27,6 @@
                 foodCount++;
             }
         }
+        public void Update(float deltaTime) => foodGenerationTimer.Update(deltaTime);
     }
 }

@@ -33,6 +33,7 @@ namespace SnakeGameFirst
         public Map Map { get => gameMediator.map; }
 
         private void Start() => StartGame();
+        private void Update() => gameMediator.Update(Time.deltaTime);
         /// <summary>Запускает игру.</summary>
         public void StartGame()
         {

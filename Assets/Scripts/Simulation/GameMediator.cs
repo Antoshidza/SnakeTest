@@ -40,5 +40,11 @@ namespace SnakeGameFirst
             map.Reset();
             player.Reset(map.CenterIndexPosition);
         }
+        /// <summary>Вызывает <see cref="Map">Map</see>.Update() и <see cref="Player">Player</see>.Update()</summary>
+        public void Update(float deltaTime)
+        {
+            map.Update(deltaTime);
+            player.Update(deltaTime);
+        }
     }
 }

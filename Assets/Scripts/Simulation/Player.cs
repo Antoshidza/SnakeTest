@@ -61,5 +61,11 @@ namespace SnakeGameFirst
             snake.Reset(spawnIndexPosition, 3);
             Score.Reset();
         }
+        /// <summary>Вызывает <see cref="Snake">Snake</see>.Update() и <see cref="Score">Score</see>.Update()</summary>
+        public void Update(float deltaTime)
+        {
+            snake.Update(deltaTime);
+            Score.Update(deltaTime);
+        }
     }
 }

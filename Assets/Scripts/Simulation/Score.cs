@@ -60,5 +60,6 @@ namespace SnakeGameFirst
             Count = 0;
             ResetBonus();
         }
+        public void Update(float deltaTime) => bonusResetTimer.Update(deltaTime);
     }
 }
