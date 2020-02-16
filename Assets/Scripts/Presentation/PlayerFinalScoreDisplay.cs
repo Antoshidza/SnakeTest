@@ -13,6 +13,6 @@ namespace SnakeGameFirst
         [SerializeField]
         private GameController gameController;
 
-        public void UpdateScoreText() => scoreText.text = $"score: {gameController.Player.Score.Count}";
+        public void UpdateScoreText() => scoreText.text = $"score: {gameController.Score.Count}";
     }
 }

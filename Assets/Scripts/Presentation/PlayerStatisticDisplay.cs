@@ -3,9 +3,7 @@ using UnityEngine.UI;
 
 namespace SnakeGameFirst
 {
-    /// <summary>
-    /// Отображает данные о победных очках игрока
-    /// </summary>
+    /// <summary>Отображает данные о победных очках игрока</summary>
     public class PlayerStatisticDisplay : MonoBehaviour
     {
         [SerializeField]
@@ -20,10 +18,10 @@ namespace SnakeGameFirst
 
         public void StartDisplay()
         {
-            UpdateCountText(gameController.Player.Score.Count);
-            UpdateBonusText(gameController.Player.Score.Bonus);
-            gameController.Player.Score.OnCountChange += UpdateCountText;
-            gameController.Player.Score.OnBonusChange += UpdateBonusText;
+            UpdateCountText(gameController.Score.Count);
+            UpdateBonusText(gameController.Score.Bonus);
+            gameController.Score.OnCountChange += UpdateCountText;
+            gameController.Score.OnBonusChange += UpdateBonusText;
         }
         private void UpdateCountText(int value) => scoreCountText.text = $"ОЧКИ: {value}";
         private void UpdateBonusText(int value) => scoreBonusText.text = $"x {value}";

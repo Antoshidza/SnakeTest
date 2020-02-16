@@ -27,6 +27,7 @@ namespace SnakeGameFirst
         /// Уменьшается в обратной ситуации. Используется для посика пустых клеток.
         /// </summary>
         private int filledCellCount;
+        //TODO: отделить, создать FoodGeneratorConfigurationData
         /// <summary>Генерируется при создании карты.</summary>
         private readonly FoodGenerator foodGenerator;
 
@@ -55,6 +56,8 @@ namespace SnakeGameFirst
             cellContents = new CellContentType[CellCount];
             foodGenerator = new FoodGenerator(this, maxFoodCount, foodGenerateInterval);
         }
+        public Map(MapConfigurationData mapConfigurationData)
+            : this(mapConfigurationData.mapSize, mapConfigurationData.maxFoodCount) { }
         /// <summary>Изменяет содержимое клетки.</summary>
         /// <param name="cellIndex">Индекс клетки</param>
         /// <param name="contentType">Новое содержимое клетки</param>

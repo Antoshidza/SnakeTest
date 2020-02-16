@@ -36,11 +36,19 @@ namespace SnakeGameFirst
             moveTimer.OnTime += Move;
         }
         /// <param name="map">Инстанс карты</param>
-        /// <param name="coordinates">Стартовая позиция змейки</param>
+        /// <param name="spawnPosition">Стартовая позиция змейки</param>
         /// <param name="stepInterval">Временой интервал одного шага змейки</param>
         /// <param name="snakeLength">Стартовая длина змейки</param>
-        public Snake(Map map, Vector2Int coordinates, float stepInterval = 1f, int snakeLength = 3)
-            : this(map, map.ConvertVector2IntToIndex(coordinates), stepInterval, snakeLength) { }
+        public Snake(Map map, Vector2Int spawnPosition, float stepInterval = 1f, int snakeLength = 3)
+            : this(map, map.ConvertVector2IntToIndex(spawnPosition), stepInterval, snakeLength) { }
+        /// <param name="map">Инстанс карты</param>
+        /// <param name="spawnCellIndex">Индекс стартовой клетки змейки</param>
+        public Snake(Map map, SnakeConfigurationData snakeConfigurationData, int spawnCellIndex = 0)
+            : this(map, spawnCellIndex, snakeConfigurationData.stepInterval, snakeConfigurationData.startLength) { }
+        /// <param name="map">Инстанс карты</param>
+        /// <param name="spawnPosition">Стартовая позиция змейки</param>
+        public Snake(Map map, SnakeConfigurationData snakeConfigurationData, Vector2Int spawnPosition)
+            : this(map, map.ConvertVector2IntToIndex(spawnPosition), snakeConfigurationData.stepInterval, snakeConfigurationData.startLength) { }
         /// <summary>Создает змейку, помещая её на карту</summary>
         /// <param name="length">Стартовая длина змейки</param>
         /// <param name="spawnIndexPosition">Индекс стартовой клетки змейки</param>

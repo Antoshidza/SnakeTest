@@ -35,21 +35,19 @@ namespace SnakeGameFirst
 
         /// <param name="snake">Инстанс змейки, за событиями которой следит Score.</param>
         /// <param name="bonusResetInterval">Временой интервал сброса множителя очков.</param>
-        public Score(Snake snake, float bonusResetInterval = 5f)
+        public Score(float bonusResetInterval = 5f)
         {
             bonus = 1;
             bonusResetTimer = new Timer(bonusResetInterval);
             bonusResetTimer.OnTime += ResetBonus;
-            snake.OnFeed += IncreaseCount;
-            snake.OnFeed += IncreaseBonus;
         }
         private void ResetBonus() => Bonus = 1;
-        private void IncreaseCount()
+        public void IncreaseCount()
         {
             Count += bonus;
             OnCountChange?.Invoke(count);
         }
-        private void IncreaseBonus()
+        public void IncreaseBonus()
         {
             Bonus++;
             bonusResetTimer.Reset();
