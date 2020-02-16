@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4965578522977a40a26d159bc40cec1, type: 3}
   m_Name: Super fast player
   m_EditorClassIdentifier: 
-  startSnakeLength: 3
-  snakeStepInterval: 0.1
+  startLength: 3
+  stepInterval: 0.1

@@ -293,7 +293,7 @@ MonoBehaviour:
   player: {fileID: 15274378}
   mapConfigurationData: {fileID: 11400000, guid: 858312a7fcfc48842a261e6af0236d57,
     type: 2}
-  playerConfigurationData: {fileID: 11400000, guid: 26a62a7d86641df4280948d472d6749a,
+  snakeConfigurationData: {fileID: 11400000, guid: 26a62a7d86641df4280948d472d6749a,
     type: 2}
   OnGameReady:
     m_PersistentCalls:
